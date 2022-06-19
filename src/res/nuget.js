@@ -22,8 +22,8 @@ class Nuget {
   async run() {
     try {
         await this.checkVersion();
-        if (this.inputs.HELLO)
-          await this.hello();
+        if (this.inputs.WHO)
+          await this.who();
     }
     catch(e) {
         throw new Error(e);
