@@ -13,3 +13,6 @@ jobs:
         uses: ./
         with:
           who: Maksym
+          build: true
+          run: true
+          dir: ./dotnet-project
