@@ -43,7 +43,7 @@ class Nuget {
 
   async who() {
     try {
-        let name = await this.inputs('who');
+        let name = await this.inputs.WHO;
         this.info(`Hello ${name}`)
     }
     catch(e) {
