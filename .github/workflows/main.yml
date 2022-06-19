@@ -10,6 +10,6 @@ jobs:
       - name: .Net setup
         uses: xt0rted/setup-dotnet@v1.0.0
       - name: Hello world action step
-        uses: ./
+        uses: ./src/
         with:
           hello: true
