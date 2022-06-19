@@ -75,7 +75,7 @@ class Nuget {
 
   async run() {
     try {
-        await this.Shell.run('dotnet', [ 'build' ]);
+        await this.Shell.run('dotnet', [ 'run' ]);
     }
     catch(e) {
         throw new Error(e);
