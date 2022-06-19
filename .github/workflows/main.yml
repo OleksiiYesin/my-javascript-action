@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Hello world action step
         id: hello
-        uses: ./
+        uses: actions/my-javascript-actiont@v1.1
         with:
           who-to-greet: 'Oleksii Yesin'
       # Use the output from the `hello` step
