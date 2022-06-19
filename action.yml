@@ -1,7 +1,7 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  hello:  
+  who:  
     description: 'should be say hello'
     required: true
 runs:
