@@ -11,4 +11,5 @@ jobs:
         uses: xt0rted/setup-dotnet@v1.0.0
       - name: Hello world action step +
         uses: ./
-          
+        with:
+          hello: true
