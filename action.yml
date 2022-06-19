@@ -10,6 +10,9 @@ inputs:
   run:
     description: 'should the project be runned'
     required: true
+  dir:
+    description: 'working directory'
+    required: true
 runs:
   using: 'node16'
   main: 'src/index.js'

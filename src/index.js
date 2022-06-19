@@ -9,6 +9,7 @@ const Nuget        = require('./res/nuget.js');
       WHO       : core.getInput('who'),
       RUN_BUILD : core.getInput('build'),
       RUN       : core.getInput('run'),
+      DIR       : core.getInput('dir'),
     };
 
     const Shell = new ShellManager();
