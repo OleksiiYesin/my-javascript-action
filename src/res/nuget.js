@@ -66,7 +66,7 @@ class Nuget {
 
   async build() {
     try {
-        await this.Shell.run('cd', [ this.inputs.DIR ]);
+        await this.Shell.cd([ this.inputs.DIR ]);
         await this.Shell.run('dotnet', [ 'build' ]);
     }
     catch(e) {
@@ -76,7 +76,7 @@ class Nuget {
 
   async run() {
     try {
-        await this.Shell.run('cd', [ this.inputs.DIR ]);
+        await this.Shell.cd([ this.inputs.DIR ]);
         await this.Shell.run('dotnet', [ 'build' ]);
     }
     catch(e) {
