@@ -8,7 +8,7 @@ class ShellManager {
 
   async run (cmd, args, opt) {
     
-    this.clean();
+    shell.clean();
 
     if (!opt) opt = {};
 
