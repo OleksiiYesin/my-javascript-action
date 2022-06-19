@@ -1,3 +1,5 @@
+const { countReset } = require("console");
+
 class Nuget {
     constructor() {
         this.inputs = {};
@@ -40,7 +42,8 @@ class Nuget {
 
   async hello() {
     try {
-        await this.Shell.run('echo "Hello Oleksii"');
+        let name = await this.inputs(WHO);
+        this.info(`Hello ${name}`)
     }
     catch(e) {
         throw new Error(e);
