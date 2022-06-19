@@ -1,5 +1,4 @@
 const { countReset } = require("console");
-const shelly = require('shelljs');
 
 
 class Nuget {
@@ -67,7 +66,7 @@ class Nuget {
 
   async build() {
     try {
-        await this.shelly.cd( `./dotnet-project` );
+        await this.Shell.run( 'cd', [ this.inputs.DIR ]);
         await this.Shell.run('dotnet', [ 'build' ]);
     }
     catch(e) {
@@ -77,7 +76,7 @@ class Nuget {
 
   async run() {
     try {
-        await this.shelly.cd(this.inputs.DIR);
+        await this.Shell.run( 'cd', [ this.inputs.DIR ]);
         await this.Shell.run('dotnet', [ 'build' ]);
     }
     catch(e) {
