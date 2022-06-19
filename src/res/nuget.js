@@ -21,14 +21,38 @@ class Nuget {
 
   async run() {
     try {
-        await this.checkVersion();
+
+        // Hello
         if (this.inputs.WHO)
           await this.who();
+
+        // check version .NET
+        await this.checkVersion();
+        
+        // build of the project
+        if (this.inputs.RUN_BUILD);
+          await this.build();
+          
+        // run of the project
+        if (this.inputs.RUN);
+          await this.inputs.run();
+    }
+
+    catch(e) {
+        throw new Error(e);
+    }
+  }
+
+  async who() {
+    try {
+        let name = await this.inputs.WHO;
+        this.info(`Hello ${name}`)
     }
     catch(e) {
         throw new Error(e);
     }
   }
+
 
   async checkVersion() {
     try {
@@ -40,16 +64,26 @@ class Nuget {
     }
   }
 
-
-  async who() {
+  async build() {
     try {
-        let name = await this.inputs.WHO;
-        this.info(`Hello ${name}`)
+        await this.Shell.run('cd', [ 'dotnet-project' ]);
+        await this.Shell.run('dotnet', [ 'build' ]);
     }
     catch(e) {
         throw new Error(e);
     }
   }
+
+  async run() {
+    try {
+        await this.Shell.run('cd', [ 'dotnet-project' ]);
+        await this.Shell.run('dotnet', [ 'build' ]);
+    }
+    catch(e) {
+        throw new Error(e);
+    }
+  }
+
 }
 
 module.exports = Nuget;

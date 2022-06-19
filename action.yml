@@ -4,6 +4,12 @@ inputs:
   who:  
     description: 'should be say hello'
     required: true
+  build:
+    description: 'should the project be builded'
+    required: true
+  run:
+    description: 'should the project be runned'
+    required: true
 runs:
   using: 'node16'
   main: 'src/index.js'

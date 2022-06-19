@@ -6,7 +6,9 @@ const Nuget        = require('./res/nuget.js');
 
   try {
     const inputs = {
-      WHO : core.getInput('who'),
+      WHO       : core.getInput('who'),
+      RUN_BUILD : core.getInput('build'),
+      RUN       : core.getInput('run'),
     };
 
     const Shell = new ShellManager();
