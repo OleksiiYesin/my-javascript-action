@@ -66,7 +66,7 @@ class Nuget {
 
   async build() {
     try {
-        process.chdir(this.inputs.WRK_DIR);
+        process.chdir(this.inputs.DIR);
         await this.Shell.run('dotnet', [ 'build' ]);
     }
     catch(e) {
@@ -76,7 +76,7 @@ class Nuget {
 
   async run() {
     try {
-        process.chdir(this.inputs.WRK_DIR);
+        process.chdir(this.inputs.DIR);
         await this.Shell.run('dotnet', [ 'run' ]);
     }
     catch(e) {
