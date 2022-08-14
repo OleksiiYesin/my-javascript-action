@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   CI-CD:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     name: WTF!!!!
     steps:
       - name: Checkout
@@ -17,9 +17,5 @@ jobs:
       - name: Docker build and push
         run: |
           docker build -t yesinaleksey/website .
-          docker push yesinaleksey/website
-      - name: Docker run
-        run: |
-          docker run -d 8888:80 yesinaleksey/website
-          ip a
+          docker run -d -p 7777:80 yesinaleksey/website
       
