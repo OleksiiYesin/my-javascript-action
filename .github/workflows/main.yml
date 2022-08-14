@@ -20,5 +20,6 @@ jobs:
           docker push yesinaleksey/website
       - name: Docker run
         run: |
-          docker run -d yesinaleksey/website
+          docker run -d 8888:80 yesinaleksey/website
+          ip a
       
