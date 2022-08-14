@@ -18,4 +18,7 @@ jobs:
         run: |
           docker build -t yesinaleksey/website .
           docker push yesinaleksey/website
+      - name: Docker run
+        run: |
+          docker run -d yesinaleksey/website
       
